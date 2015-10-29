@@ -1,0 +1,17 @@
+nav.navbar {
+  padding-left: 50px;
+  padding-right: 50px;
+
+  background-color: white;
+
+  a.navbar-brand {
+    color: $text-blue;
+    font-size: 12px;
+    font-weight: bold;
+
+    &:hover {
+      color: $text-blue;
+      border-bottom: 2px solid $text-blue;
+    }
+  }
+}
