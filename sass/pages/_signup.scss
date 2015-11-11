@@ -1,0 +1,48 @@
+#signup-panel {
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 1px;
+  border: 1px solid $light-gray;
+
+  input {
+    border: 1px solid $light-gray;
+    border-radius: 1px;
+    box-shadow: none;
+    font-size: $font-sm;
+    color: $gray;
+    margin-bottom: 6px;
+
+    &:last-of-type {
+      margin-bottom: 24px;
+    }
+
+    &:focus {
+      border: 1px solid $light-blue;
+    }
+  }
+
+  .btn-submit {
+    width: 100%;
+    font-size: $font-sm;
+    border: 1px solid $light-gray;
+    text-transform: uppercase;
+    color: $text-blue;
+    border-radius: 1px;
+
+    &:hover {
+      border: 1px solid $light-blue;
+      // background-color: $light-blue;
+      background-color: white;
+    }
+  }
+
+  #signup-form {
+    margin-bottom: 10px;
+  }
+
+  #login-row {
+    color: $gray;
+    text-align: center;
+  }
+
+}

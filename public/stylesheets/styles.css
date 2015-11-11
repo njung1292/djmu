@@ -71,14 +71,50 @@ nav.navbar {
 }
 /* line 7, ../../sass/components/_navigation.scss */
 nav.navbar a.navbar-brand {
-  color: #427DCA;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: bold;
 }
-/* line 12, ../../sass/components/_navigation.scss */
+/* line 11, ../../sass/components/_navigation.scss */
 nav.navbar a.navbar-brand:hover {
   color: #427DCA;
+}
+/* line 15, ../../sass/components/_navigation.scss */
+nav.navbar ul.navbar-nav {
+  font-size: 12px;
+}
+/* line 18, ../../sass/components/_navigation.scss */
+nav.navbar ul.navbar-nav li {
+  margin-right: 4px;
+}
+/* line 21, ../../sass/components/_navigation.scss */
+nav.navbar ul.navbar-nav li:last-child {
+  margin-right: 0;
+}
+/* line 25, ../../sass/components/_navigation.scss */
+nav.navbar ul.navbar-nav li a {
+  text-transform: uppercase;
+}
+/* line 30, ../../sass/components/_navigation.scss */
+nav.navbar ul.navbar-nav a:hover, nav.navbar ul.navbar-nav a:focus {
+  color: #777;
+}
+/* line 33, ../../sass/components/_navigation.scss */
+nav.navbar ul.navbar-nav a:hover {
+  background-color: white;
+  border-bottom: 2px solid #E7E7E7;
+  padding-bottom: 13px;
+}
+/* line 36, ../../sass/components/_navigation.scss */
+nav.navbar ul.navbar-nav .active > a {
+  color: #427DCA;
+  background-color: white;
   border-bottom: 2px solid #427DCA;
+  padding-bottom: 13px;
+}
+/* line 40, ../../sass/components/_navigation.scss */
+nav.navbar ul.navbar-nav .active > a:hover, nav.navbar ul.navbar-nav .active > a:focus {
+  color: #427DCA;
+  background-color: white;
 }
 
 /* line 1, ../../sass/pages/_home.scss */
@@ -91,4 +127,53 @@ html {
 /* line 7, ../../sass/pages/_home.scss */
 body {
   margin-top: 50px;
+  padding: 25px;
+}
+
+/* line 1, ../../sass/pages/_signup.scss */
+#signup-panel {
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 1px;
+  border: 1px solid #E7E7E7;
+}
+/* line 7, ../../sass/pages/_signup.scss */
+#signup-panel input {
+  border: 1px solid #E7E7E7;
+  border-radius: 1px;
+  box-shadow: none;
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 6px;
+}
+/* line 15, ../../sass/pages/_signup.scss */
+#signup-panel input:last-of-type {
+  margin-bottom: 24px;
+}
+/* line 19, ../../sass/pages/_signup.scss */
+#signup-panel input:focus {
+  border: 1px solid #D9EDF7;
+}
+/* line 24, ../../sass/pages/_signup.scss */
+#signup-panel .btn-submit {
+  width: 100%;
+  font-size: 12px;
+  border: 1px solid #E7E7E7;
+  text-transform: uppercase;
+  color: #427DCA;
+  border-radius: 1px;
+}
+/* line 32, ../../sass/pages/_signup.scss */
+#signup-panel .btn-submit:hover {
+  border: 1px solid #D9EDF7;
+  background-color: white;
+}
+/* line 39, ../../sass/pages/_signup.scss */
+#signup-panel #signup-form {
+  margin-bottom: 10px;
+}
+/* line 43, ../../sass/pages/_signup.scss */
+#signup-panel #login-row {
+  color: #777;
+  text-align: center;
 }

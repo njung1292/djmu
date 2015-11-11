@@ -2,13 +2,14 @@
 
 // Import helpers
 @import "helpers/variables";
+@import "helpers/mixins";
 
 // Import components
 @import "components/buttons";
 @import "components/navigation";
 
 // Import layout
-@import "layout/header";
 
 // Import pages
 @import "pages/home";
+@import "pages/signup";

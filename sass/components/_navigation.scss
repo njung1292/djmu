@@ -5,13 +5,42 @@ nav.navbar {
   background-color: white;
 
   a.navbar-brand {
-    color: $text-blue;
-    font-size: 12px;
+    font-size: $font-md;
     font-weight: bold;
 
     &:hover {
       color: $text-blue;
-      border-bottom: 2px solid $text-blue;
+    }
+  }
+  ul.navbar-nav {
+    font-size: $font-sm;
+
+    li {
+      margin-right: 4px;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        text-transform: uppercase;
+      }
+    }
+
+    a:hover, a:focus {
+      color: $gray;
+    }
+    a:hover {
+      @include nav-hover(2px, $light-gray);
+    }
+    .active > a {
+      color: $text-blue;
+      @include nav-hover(2px, $text-blue);
+
+      &:hover, &:focus {
+        color: $text-blue;
+        background-color: white;
+      }
     }
   }
 }
