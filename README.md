@@ -13,11 +13,11 @@ DJ Mu 2.0
     │   ├── bower.json
     │   ├── bower_components/       /* Ignored by git */
     │   ├── app/                    /* AngularJS application code */
+    │   │   ├── app.js              /* Browserify entry file */
     │   │   ├── core/
     │   │   ├── dashboard/
     │   │   ├── gallery/
-    │   │   ├── layout/
-    │   │   └── app.js              /* Browserify entry file */
+    │   │   └── layout/
     │   ├── css/
     │   ├── images/
     │   └── js/
@@ -28,6 +28,7 @@ DJ Mu 2.0
         ├── routes/
         └── styles/
             └── sass/
+                ├── styles.scss
                 ├── config.rb
                 ├── components/
                 ├── helpers/
