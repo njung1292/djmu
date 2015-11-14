@@ -1,44 +1,39 @@
-(function() {
-  'use strict';
+'use strict';
 
-  angular
-    .module('app.core')
-    .config(configure)
-    .run(appRun);
+var config = function($routeProvider, $locationProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: '/views/pages/gallery.html',
+      conroller: 'GalleryCtrl',
+      title: 'Gallery'
+    })
+    .when('/dashboard', {
+      templateUrl: '/views/pages/dashboard.html',
+      controller: 'DashboardCtrl',
+      title: 'Dashboard'
+    })
+    .when('/signup', {
+      templateUrl: '/views/pages/signup.html',
+      title: 'Sign Up'
+    })
+    .when('/login', {
+      templateUrl: '/views/pages/login.html',
+      title: 'Login'
+    });
 
-    function configure($routeProvider, $locationProvider) {
-      $routeProvider
-        .when('/', {
-          templateUrl: '/views/pages/gallery.html',
-          conroller: 'GalleryCtrl',
-          title: 'Gallery'
-        })
-        .when('/dashboard', {
-          templateUrl: '/views/pages/dashboard.html',
-          controller: 'DashboardCtrl',
-          title: 'Dashboard'
-        })
-        .when('/signup', {
-          templateUrl: '/views/pages/signup.html',
-          title: 'Sign Up'
-        })
-        .when('/login', {
-          templateUrl: '/views/pages/login.html',
-          title: 'Login'
-        });
+  $locationProvider.html5Mode(true);
+};
 
-      $locationProvider.html5Mode(true);
-    }
+  // function appRun($rootScope, $route, $location, pageService) {
+  //   $rootScope.$on('$routeChangeSuccess', function(event, current, previous) {
+  //     var currentPage = {
+  //       title: current.$$route.title,
+  //       url: current.$$route.originalPath
+  //     };
 
-    function appRun($rootScope, $route, $location, pageService) {
-      $rootScope.$on('$routeChangeSuccess', function(event, current, previous) {
-        var currentPage = {
-          title: current.$$route.title,
-          url: current.$$route.originalPath
-        };
+  //     pageService.setCurrentPage(currentPage);
 
-        pageService.setCurrentPage(currentPage);
+  //   });
+  // }
 
-      });
-    }
-})();
+module.exports = config;

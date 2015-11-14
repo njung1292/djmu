@@ -1,14 +1,10 @@
-(function() {
-  'use strict';
+'use strict';
 
-  angular
-    .module('app.layout')
-    .controller('Shell', Shell);
-
-    function Shell($scope, pageService) {
-      $scope.pages = pageService.getPages();
-      $scope.getClass = function(url) {
-        return (pageService.isCurrentPage(url) ? 'active' : '');
-      };
-    }
-})();
+var ShellCtrl = function() {
+  // $scope.pages = pageService.getPages();
+  // $scope.getClass = function(url) {
+  //   return (pageService.isCurrentPage(url) ? 'active' : '');
+  // };
+};
+  
+module.exports = ShellCtrl;

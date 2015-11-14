@@ -1,6 +1,8 @@
-(function() {
-  'use strict';
+'use strict';
 
-  angular.module('app.layout', []);
-    
-})();
+var ShellCtrl = require('./shell');
+var layoutModule = angular
+    .module('app.layout', [])
+    .controller('ShellCtrl', ShellCtrl);
+  
+module.exports = layoutModule;

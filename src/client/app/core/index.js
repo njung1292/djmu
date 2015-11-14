@@ -1,8 +1,8 @@
-(function() {
-  'use strict';
+'use strict';
 
-  angular.module('app.core', [
-    'ngRoute'
-  ]);
+var config = require('./config');
+var coreModule = angular
+    .module('app.core', ['ngRoute'])
+    .config(config);
   
-})();
+module.exports = coreModule;

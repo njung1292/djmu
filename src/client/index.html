@@ -5,39 +5,18 @@
     <title>DJ Mu</title>
     <!-- Fonts & CSS -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/styles.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
     <base href="/">
   </head>
   <body>
-    <div ng-include="'/views/partials/shell.html'"></div>
+    <div ng-include="'app/layout/shell.html'"></div>
 
     <!-- Scripts -->
-    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
-
-    <!-- Angular App Code -->
-    <script src="/app/app.module.js"></script>
-
-    <!-- Core Module -->
-    <script src="/app/core/core.module.js"></script>
-    <script src="/app/core/config.js"></script>
-    <script src="/app/core/pageService.js"></script>
-    <script src="/app/core/userService.js"></script>
-
-    <!-- Layout -->
-    <script src="/app/layout/layout.module.js"></script>
-    <script src="/app/layout/shell.js"></script>
-
-    <!-- Dashboard -->
-    <script src="/app/dashboard/dashboard.module.js"></script>
-    <script src="/app/dashboard/dashboard.js"></script>
-
-    <!-- Gallery -->
-    <script src="/app/gallery/gallery.module.js"></script>
+    <script type="text/javascript" src="js/bundle.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
   </body>
 </html>

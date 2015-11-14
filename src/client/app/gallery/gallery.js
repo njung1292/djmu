@@ -1,10 +1,7 @@
-(function() {
-  'use strict';
+'use strict';
 
-  angular
-    .module('app.gallery')
-    .controller('GalleryCtrl', GalleryCtrl);
+var GalleryCtrl = function() {
 
-  function GalleryCtrl() {
-  }
-})();
+};
+
+module.exports = GalleryCtrl;

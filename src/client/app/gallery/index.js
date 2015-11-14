@@ -1,5 +1,8 @@
-(function() {
-  'use strict';
+'use strict';
 
-  angular.module('app.gallery', []);
-})();
+var GalleryCtrl = require('./gallery');
+var galleryModule = angular
+    .module('app.gallery', [])
+    .controller('GalleryCtrl', GalleryCtrl);
+  
+module.exports = galleryModule;

@@ -1,10 +1,7 @@
-(function() {
-  'use strict';
+'use strict';
 
-  angular
-    .module('app.dashboard')
-    .controller('DashboardCtrl', DashboardCtrl);
+var DashboardCtrl = function() {
 
-  function DashboardCtrl() {
-  }
-})();
+};
+
+module.exports = DashboardCtrl;
