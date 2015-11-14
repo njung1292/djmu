@@ -4,7 +4,6 @@ DJ Mu 2.0
 ## File Structure
 ```
 .
-├── DJ\ Mu.bmpr
 ├── gulpfile.js
 ├── package.json
 ├── node_modules/                     /* Ignored by git */
