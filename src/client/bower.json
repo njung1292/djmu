@@ -1,0 +1,25 @@
+{
+  "name": "djmu",
+  "homepage": "https://github.com/njung1292/djmu",
+  "authors": [
+    "Noelle Jung <njung1292@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.7",
+    "angular-route": "~1.4.7",
+    "jquery": "~2.1.4"
+  }
+}
