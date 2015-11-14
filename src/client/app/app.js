@@ -15,5 +15,4 @@
     gallery.name,
     layout.name
   ]);
-
 })();

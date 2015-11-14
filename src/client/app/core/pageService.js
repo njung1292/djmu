@@ -20,16 +20,6 @@
         url: '/dashboard',
         enable: userService.user
       },
-      {
-        title: 'Logout',
-        url: '/logout',
-        enable: userService.user
-      },
-      {
-        title: 'Sign up/Login',
-        url: '/signup',
-        enable: !userService.user
-      }
     ];
 
     var service = {

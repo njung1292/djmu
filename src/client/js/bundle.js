@@ -29922,8 +29922,8 @@ module.exports = angular;
     gallery.name,
     layout.name
   ]);
-
 })();
+
 },{"./core":7,"./dashboard":9,"./gallery":11,"./layout":12,"angular":4,"angular-route":2}],6:[function(require,module,exports){
 'use strict';
 
@@ -30025,12 +30025,19 @@ module.exports = layoutModule;
 },{"./shell":13}],13:[function(require,module,exports){
 'use strict';
 
-var ShellCtrl = function() {
+var ShellCtrl = function($scope, $location) {
+  $scope.pageTitle = "DJ Mu";
+  // $scope.user = "hi";
   // $scope.pages = pageService.getPages();
   // $scope.getClass = function(url) {
   //   return (pageService.isCurrentPage(url) ? 'active' : '');
   // };
+  $scope.isActive = function(href) {
+    return ($location.path() === href);
+  };
 };
-  
+ShellCtrl.$inject = ['$scope', '$location'];
+
 module.exports = ShellCtrl;
+
 },{}]},{},[5]);

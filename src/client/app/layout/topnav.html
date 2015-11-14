@@ -1,9 +1,19 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">DJ Mu</a>
+      <a class="navbar-brand" href="/">{{ pageTitle }}</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
+      <li role="presentation" ng-class="{ 'active': isActive('/') }">
+        <a href="/">Home</a>
+      </li>
+      <li role="presentation" ng-if="user" ng-class="{ 'active': isActive('/dashboard') }">
+        <a href="/dashboard">Dashboard</a>
+      </li>
+      <li role="presentation">
+        <button ng-if="user" type="button" class="btn btn-default navbar-btn">Logout</button>
+        <button ng-if="!user" type="button" class="btn btn-default navbar-btn">Sign Up/Login</button>
+      </li>
       <li role="presentation" ng-repeat="page in pages" ng-if="page.enable" ng-class="getClass('{{ page.url }}')"><a href="{{ page.url }}">{{ page.title }}</a></li>
     </ul>
   </div>

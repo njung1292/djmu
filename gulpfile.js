@@ -9,8 +9,10 @@ var clean = require('gulp-clean');
 var runSequence = require('run-sequence');
 
 gulp.task('clean', function() {
-    gulp.src('./src/client/js/bundle.js')
-      .pipe(clean({force: true}));
+  gulp.src('./src/client/js/bundle.js')
+    .pipe(clean({force: true}));
+  gulp.src('./src/client/css/styles.css')
+    .pipe(clean({force: true}));
 });
 
 gulp.task('connect', function() {
@@ -18,6 +20,12 @@ gulp.task('connect', function() {
     root: 'src/client',
     port: 3000
   });
+});
+
+gulp.task('styles', function() {
+  return sass('./src/server/styles/sass/styles.scss',
+      { compass: true })
+    .pipe(gulp.dest('./src/client/css'));
 });
 
 gulp.task('browserify', function() {
@@ -30,6 +38,12 @@ gulp.task('browserify', function() {
 gulp.task('build', function() {
   runSequence(
     ['clean'],
-    ['browserify']
+    ['browserify'],
+    ['styles']
   );
+});
+
+gulp.task('watch', function() {
+    gulp.watch('./src/client/app/**/*.js', ['build']);
+    gulp.watch('./src/server/styles/sass/**/*.scss', ['styles']);
 });
